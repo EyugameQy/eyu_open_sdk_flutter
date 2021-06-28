@@ -1,0 +1,38 @@
+[
+  {
+    "keys": ["max_inter"],
+    "isAutoLoad": "true",
+    "id": "main_view_inter_ad",
+    "type": "interstitialAd"
+  },
+  {
+    "keys": ["fb_native","ad_native"],
+    "isAutoLoad": "true",
+    "id": "main_view_native_ad",
+    "type": "nativeAd"
+  },
+  {
+    "keys": ["fb_native_2","ad_native_2"],
+    "isAutoLoad": "true",
+    "id": "page_view_native_ad",
+    "type": "nativeAd"
+  },
+  {
+    "keys": ["fb_native_1","ad_native_1"],
+    "id": "question_native_ad",
+    "isAutoLoad": "false",
+    "type": "nativeAd"
+  },
+  {
+    "keys": ["max_banner"],
+    "isAutoLoad": "true",
+    "id": "page_view_banner_ad",
+    "type": "bannerAd"
+  },
+  {
+    "keys": ["max_reward"],
+    "isAutoLoad": "true",
+    "id": "reward_ad",
+    "type": "rewardAd"
+  }
+]

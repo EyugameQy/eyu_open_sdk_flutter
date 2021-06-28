@@ -1,0 +1,155 @@
+[
+  {
+    "id": "fb_inter",
+    "key": "1615119341985947_1615120715319143",
+    "network": "facebook"
+  },
+  {
+    "id": "fb_inter_1",
+    "key": "1615119341985947_1648926198605261",
+    "network": "facebook"
+  },
+  {
+    "id": "fb_reward",
+    "key": "1615119341985947_1615147458649802",
+    "network": "facebook"
+  },
+  {
+    "id": "fb_reward_1",
+    "key": "1615119341985947_1648925915271956",
+    "network": "facebook"
+  },
+  {
+    "id": "fb_native",
+    "key": "1615119341985947_1643472055817342",
+    "network": "facebook"
+  },
+  {
+    "id": "fb_native_1",
+    "key": "1615119341985947_1743423645822182",
+    "network": "facebook"
+  },
+  {
+    "id": "fb_native_2",
+    "key": "1615119341985947_1767502616747618",
+    "network": "facebook"
+  },
+  {
+    "id": "fb_banner",
+    "key": "1615119341985947_1648923375272210",
+    "network": "facebook"
+  },
+  {
+    "id": "ad_inter",
+    "key": "ca-app-pub-6999857227807028/3356950991",
+    "network": "admob",
+    "testKey": "ca-app-pub-3940256099942544/1033173712"
+  },
+  {
+    "id": "ad_inter_1",
+    "key": "ca-app-pub-6999857227807028/2038286774",
+    "network": "admob",
+    "testKey": "ca-app-pub-3940256099942544/1033173712"
+  },
+  {
+    "id": "ad_reward",
+    "key": "ca-app-pub-6999857227807028/3910011924",
+    "network": "admob",
+    "testKey": "ca-app-pub-3940256099942544/5224354917"
+  },
+  {
+    "id": "ad_reward_1",
+    "key": "ca-app-pub-6999857227807028/8603695123",
+    "network": "admob",
+    "testKey": "ca-app-pub-3940256099942544/5224354917"
+  },
+  {
+    "id": "ad_native",
+    "key": "ca-app-pub-6999857227807028/2664039551",
+    "network": "admob",
+    "testKey": "ca-app-pub-3940256099942544/2247696110"
+  },
+  {
+    "id": "ad_native_1",
+    "key": "ca-app-pub-6999857227807028/5867473652",
+    "network": "admob",
+    "testKey": "ca-app-pub-3940256099942544/2247696110"
+  },
+  {
+    "id": "ad_native_2",
+    "key": "ca-app-pub-6999857227807028/2282088451",
+    "network": "admob",
+    "testKey": "ca-app-pub-3940256099942544/2247696110"
+  },
+  {
+    "id": "ad_banner",
+    "key": "ca-app-pub-6999857227807028/1283848587",
+    "network": "admob",
+    "testKey": "ca-app-pub-3940256099942544/6300978111"
+  },
+  {
+    "id": "unity_inter",
+    "key": "video",
+    "network": "unity"
+  },
+  {
+    "id": "unity_reward",
+    "key": "rewardedVideo",
+    "network": "unity"
+  },
+  {
+    "id": "max_reward",
+    "key": "127f6e55fa71a51b",
+    "network": "max"
+  },
+  {
+    "id": "max_inter",
+    "key": "a021222488a50cc6",
+    "network": "max"
+  },
+  {
+    "id": "max_banner",
+    "key": "c6135222c82ac6c7",
+    "network": "max"
+  },
+  {
+    "id": "topon_banner",
+    "key": "b5baca45138428",
+    "network": "anythink"
+  },
+  {
+    "id": "topon_inter",
+    "key": "b5baca585a8fef",
+    "network": "anythink"
+  },
+  {
+    "id": "topon_native",
+    "key": "b5c2c97629da0d",
+    "network": "anythink"
+  },
+  {
+    "id": "topon_reward",
+    "key": "b5b728e7a08cd4",
+    "network": "anythink"
+  },
+  {
+    "id": "tradplus_banner",
+    "key": "95F0DE4C8EBAC630D7ED70B5148A436D",
+    "network": "tradplus"
+  },
+  {
+    "id": "tradplus_inter",
+    "key": "424512B9CCE0F6A265D35AE0BACDA1F3",
+    "network": "tradplus"
+  },
+  {
+    "id": "tradplus_native",
+    "key": "58C1BEE852DFB00AD9B274A33BE67E9F",
+    "network": "tradplus"
+  },
+  {
+    "id": "tradplus_reward",
+    "key": "D5D22C2D630307489AB28653A61315E7",
+    "network": "tradplus"
+  }
+]

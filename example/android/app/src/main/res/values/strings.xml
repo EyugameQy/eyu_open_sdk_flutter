@@ -1,0 +1,10 @@
+<resources>
+    <string name="google_ads_app_id_muslim">ca-app-pub-6999857227807028~8852820252</string>
+    <string name="google_ads_app_id_tap2">ca-app-pub-9624926763614741~3247824769</string>
+    <string name="google_ads_app_id_chat">ca-app-pub-9624926763614741~5963139829</string>
+
+    <string name="facebook_app_id_chat">818369739053932</string>
+
+    <string name="facebook_app_id">1615119341985947</string>
+    <string name="applovin_sdk_key">9aiR-8NXTyh84IIr1CWylMWBF4Fkf1Qpc8FaHc6qZoyd4FS6S-2BKZNaecIIdk6EtLq8zwzWiw8o9aucZxovU9</string>
+</resources>
