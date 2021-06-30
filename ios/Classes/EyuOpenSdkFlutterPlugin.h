@@ -2,3 +2,4 @@
 
 @interface EyuOpenSdkFlutterPlugin : NSObject<FlutterPlugin>
 @end
+

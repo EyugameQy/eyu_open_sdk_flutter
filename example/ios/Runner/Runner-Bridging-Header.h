@@ -1,1 +1,6 @@
 #import "GeneratedPluginRegistrant.h"
+#import "EYAdManager.h"
+#import "EYAdConfig.h"
+#import "EYRemoteConfigHelper.h"
+#import "EYSdkUtils.h"
+#import "EYEventUtils.h"
