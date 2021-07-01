@@ -41,7 +41,7 @@ import eyu_open_sdk_flutter
     }
     
     func getNativeView(placeId: String) -> UIView? {
-        return EYAdManager.sharedInstance()?.getNativeView(placeId)
+        return EYAdManager.sharedInstance()?.getNativeView(placeId, controller: window.rootViewController)
     }
     
     func convertEyuadToFlutter(eyuAd: EYuAd) -> FlutterEYuAd {

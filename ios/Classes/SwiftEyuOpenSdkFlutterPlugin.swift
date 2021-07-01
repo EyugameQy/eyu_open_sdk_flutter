@@ -27,11 +27,10 @@ public class SwiftEyuOpenSdkFlutterPlugin: NSObject, FlutterPlugin {
     if call.method == "getPlatformVersion" {
         result("iOS " + UIDevice.current.systemVersion)
     } else if call.method == "init" {
-//        delegate?.handleInitMessage()
+        delegate?.handleInitMessage()
     } else if call.method == "isAdLoaded" {
-        result(true)
-//        let dic = call.arguments as? [String: String]
-//        result(delegate?.handleIsAdLoadedMessage(placeId: dic?["adPlaceId"] ?? ""))
+        let dic = call.arguments as? [String: String]
+        result(delegate?.handleIsAdLoadedMessage(placeId: dic?["adPlaceId"] ?? ""))
     } else if call.method == "show" {
         let dic = call.arguments as? [String: String]
         result(delegate?.handleShowAdMessage(placeId: dic?["adPlaceId"] ?? ""))
@@ -52,19 +51,22 @@ class EyuAdsReaderWriter: FlutterStandardReaderWriter {
 }
 
 class EyuAdsWriter: FlutterStandardWriter {
+    private let VALUE_AD: UInt8 = 128;
+    private let VALUE_AD_ERROR: UInt8 = 129;
+    
     override func writeValue(_ value: Any) {
         if let ad = value as? FlutterEYuAd {
+            self.writeByte(VALUE_AD)
             self.writeValue(ad.unitId)
-            self.writeValue(ad.unitName)
-            self.writeValue(ad.adRevenue)
-            self.writeValue(ad.adFormat)
             self.writeValue(ad.placeId)
+            self.writeValue(ad.adFormat)
+            self.writeValue(ad.adRevenue)
             self.writeValue(ad.mediator)
             self.writeValue(ad.networkName)
-            if ad.error != nil {
-                self.writeValue(ad.error!.code)
-                self.writeValue(ad.error!.localizedDescription)
-            }
+        } else if let error = value as? NSError {
+            self.writeByte(VALUE_AD_ERROR)
+            self.writeValue(error.code)
+            self.writeValue(error.localizedDescription)
         } else {
             super.writeValue(value)
         }

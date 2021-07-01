@@ -30,34 +30,34 @@ public class FlutterAdManager {
     }
     
     public func onAdLoaded(_ eyuAd: FlutterEYuAd) {
-//        channel.invokeMethod("onAdEvent", arguments: ["ad": eyuAd, "eventName": "onAdLoaded"])
+        channel.invokeMethod("onAdEvent", arguments: ["ad": eyuAd, "eventName": "onAdLoaded"])
     }
     
     public func onAdReward(_ eyuAd: FlutterEYuAd) {
-//        channel.invokeMethod("onAdEvent", arguments: ["ad": eyuAd, "eventName": "onAdReward"])
+        channel.invokeMethod("onAdEvent", arguments: ["ad": eyuAd, "eventName": "onAdReward"])
     }
     
     public func onAdShowed(_ eyuAd: FlutterEYuAd) {
-//        channel.invokeMethod("onAdEvent", arguments: ["ad": eyuAd, "eventName": "onAdShowed"])
+        channel.invokeMethod("onAdEvent", arguments: ["ad": eyuAd, "eventName": "onAdShowed"])
     }
     
     public func onAdClosed(_ eyuAd: FlutterEYuAd) {
-//        channel.invokeMethod("onAdEvent", arguments: ["ad": eyuAd, "eventName": "onAdClosed"])
+        channel.invokeMethod("onAdEvent", arguments: ["ad": eyuAd, "eventName": "onAdClosed"])
     }
     
     public func onAdClicked(_ eyuAd: FlutterEYuAd) {
-//        channel.invokeMethod("onAdEvent", arguments: ["ad": eyuAd, "eventName": "onAdClicked"])
+        channel.invokeMethod("onAdEvent", arguments: ["ad": eyuAd, "eventName": "onAdClicked"])
     }
     
     public func onAdLoadFailed(_ eyuAd: FlutterEYuAd) {
-//        channel.invokeMethod("onAdEvent", arguments: ["ad": eyuAd, "eventName": "onAdLoadFailed"])
+        channel.invokeMethod("onAdEvent", arguments: ["ad": eyuAd, "eventName": "onAdLoadFailed", "error": eyuAd.error ?? NSError()])
     }
     
     public func onAdImpression(_ eyuAd: FlutterEYuAd) {
-//        channel.invokeMethod("onAdEvent", arguments: ["ad": eyuAd, "eventName": "onAdImpression"])
+        channel.invokeMethod("onAdEvent", arguments: ["ad": eyuAd, "eventName": "onAdImpression"])
     }
     
     public func onAdRevenue(_ eyuAd: FlutterEYuAd) {
-//        channel.invokeMethod("onAdEvent", arguments: ["ad": eyuAd, "eventName": "onAdImpression"])
+        channel.invokeMethod("onAdEvent", arguments: ["ad": eyuAd, "eventName": "onAdRevenue"])
     }
 }

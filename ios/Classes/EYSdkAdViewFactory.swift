@@ -16,7 +16,6 @@ class EYSdkAdViewFactory: NSObject, FlutterPlatformViewFactory {
 
     func create(withFrame frame: CGRect, viewIdentifier viewId: Int64, arguments args: Any?) -> FlutterPlatformView {
         let placeId = args as? String
-        print(args)
         let adType = delegate?.adTypeFor(placeId: placeId ?? "")
         if adType == "bannerAd" {
             return FlutterBannerAd(flutterPluginDelegate: delegate, placeId: placeId ?? "")
@@ -24,6 +23,10 @@ class EYSdkAdViewFactory: NSObject, FlutterPlatformViewFactory {
             return FlutterNativeAd(flutterPluginDelegate: delegate, placeId: placeId ?? "")
         }
         return FlutterBannerAd(flutterPluginDelegate: delegate, placeId:"")
+    }
+    
+    func createArgsCodec() -> FlutterMessageCodec & NSObjectProtocol {
+        return FlutterStandardMessageCodec.sharedInstance()
     }
 }
 
