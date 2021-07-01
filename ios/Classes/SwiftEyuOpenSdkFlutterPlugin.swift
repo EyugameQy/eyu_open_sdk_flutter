@@ -5,6 +5,9 @@ public protocol SwiftEyuOpenSdkFlutterPluginDelegate: AnyObject {
     func handleInitMessage()
     func handleIsAdLoadedMessage(placeId: String) -> Bool
     func handleShowAdMessage(placeId: String) -> Bool
+    func adTypeFor(placeId: String) -> String
+    func getBannerView(placeId: String) -> UIView?
+    func getNativeView(placeId: String) -> UIView?
 }
 
 public class SwiftEyuOpenSdkFlutterPlugin: NSObject, FlutterPlugin {
@@ -12,21 +15,23 @@ public class SwiftEyuOpenSdkFlutterPlugin: NSObject, FlutterPlugin {
     
   public static func register(with registrar: FlutterPluginRegistrar) {
     let channel = FlutterMethodChannel(name: "com.eyu.opensdk/ad", binaryMessenger: registrar.messenger(), codec: FlutterStandardMethodCodec(readerWriter: EyuAdsReaderWriter()))
-//    let channel = FlutterMethodChannel(name: "com.eyu.opensdk/ad", binaryMessenger: registrar.messenger())
     let instance = SwiftEyuOpenSdkFlutterPlugin()
     instance.delegate = UIApplication.shared.delegate as? SwiftEyuOpenSdkFlutterPluginDelegate
     _ = FlutterAdManager(channel: channel)
+    
     registrar.addMethodCallDelegate(instance, channel: channel)
+    registrar.register(EYSdkAdViewFactory(flutterPluginDelegate: instance.delegate), withId: "com.eyu.opensdk/ad/ad_widget")
   }
 
   public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
     if call.method == "getPlatformVersion" {
         result("iOS " + UIDevice.current.systemVersion)
     } else if call.method == "init" {
-        delegate?.handleInitMessage()
+//        delegate?.handleInitMessage()
     } else if call.method == "isAdLoaded" {
-        let dic = call.arguments as? [String: String]
-        result(delegate?.handleIsAdLoadedMessage(placeId: dic?["adPlaceId"] ?? ""))
+        result(true)
+//        let dic = call.arguments as? [String: String]
+//        result(delegate?.handleIsAdLoadedMessage(placeId: dic?["adPlaceId"] ?? ""))
     } else if call.method == "show" {
         let dic = call.arguments as? [String: String]
         result(delegate?.handleShowAdMessage(placeId: dic?["adPlaceId"] ?? ""))
@@ -39,6 +44,10 @@ public class SwiftEyuOpenSdkFlutterPlugin: NSObject, FlutterPlugin {
 class EyuAdsReaderWriter: FlutterStandardReaderWriter {
     override func writer(with data: NSMutableData) -> FlutterStandardWriter {
         return EyuAdsWriter(data: data)
+    }
+    
+    override func reader(with data: Data) -> FlutterStandardReader {
+        return super.reader(with: data)
     }
 }
 

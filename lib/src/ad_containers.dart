@@ -12,6 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+import 'dart:developer';
+import 'dart:math';
+
 import 'package:eyu_open_sdk_flutter/eyu_open_sdk_flutter.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
@@ -144,6 +147,7 @@ class AdWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("${placeId}----${adManager.channel.name}/ad_widget");
     if (defaultTargetPlatform == TargetPlatform.android) {
       return PlatformViewLink(
         viewType: '${adManager.channel.name}/ad_widget',

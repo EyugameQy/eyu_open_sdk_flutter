@@ -4,7 +4,7 @@ import eyu_open_sdk_flutter
 
 @UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate, SwiftEyuOpenSdkFlutterPluginDelegate, EYAdDelegate {
-
+    
   override func application(
     _ application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
@@ -30,6 +30,18 @@ import eyu_open_sdk_flutter
     
     func handleShowAdMessage(placeId: String) -> Bool {
         return EYAdManager.sharedInstance()?.showAd(placeId, with: window.rootViewController) ?? false
+    }
+    
+    func adTypeFor(placeId: String) -> String {
+        return EYAdManager.sharedInstance()?.getAdType(placeId) ?? ""
+    }
+    
+    func getBannerView(placeId: String) -> UIView? {
+        return EYAdManager.sharedInstance()?.getBannerView(placeId)
+    }
+    
+    func getNativeView(placeId: String) -> UIView? {
+        return EYAdManager.sharedInstance()?.getNativeView(placeId)
     }
     
     func convertEyuadToFlutter(eyuAd: EYuAd) -> FlutterEYuAd {

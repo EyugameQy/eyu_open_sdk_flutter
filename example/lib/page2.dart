@@ -23,7 +23,7 @@ class _MyAppState extends State<MyApp2> {
           child: Column(
             children: [
               BannerAdWidget(placeId: "page_view_banner_ad"),
-              NativeAdWidget(placeId: "main_view_native_ad",height: 200)
+//              NativeAdWidget(placeId: "main_view_native_ad",height: 200)
             ],
           ),
         ),

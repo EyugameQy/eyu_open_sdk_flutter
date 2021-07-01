@@ -16,14 +16,14 @@
     {
         "isEnabled":"true",
         "desc":"原生广告",
-        "id":"native_ad",
+        "id":"main_view_native_ad",
         "nativeAdLayout":"nativeAd",
         "cacheGroup":"native_ad"
     },
     {
         "isEnabled":"true",
         "desc":"banner广告",
-        "id":"banner_ad",
+        "id":"page_view_banner_ad",
         "nativeAdLayout":"",
         "cacheGroup":"banner_group"
     },
