@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import 'package:meta/meta.dart';
-
 import 'ad_containers.dart';
 
 typedef AdEventCallback = void Function(EyuAd ad);
