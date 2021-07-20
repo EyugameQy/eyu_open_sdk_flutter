@@ -4,12 +4,12 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'eyu_open_sdk_flutter'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = 'eyu open sdk for flutter'
   s.description      = <<-DESC
 eyu open sdk for flutter
                        DESC
-  s.homepage         = 'http://example.com'
+  s.homepage         = 'https://github.com/EyugameQy'
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'Your Company' => 'email@example.com' }
   s.source           = { :path => '.' }
