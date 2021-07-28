@@ -60,7 +60,7 @@ class EyuAdsWriter: FlutterStandardWriter {
             self.writeValue(ad.unitId)
             self.writeValue(ad.placeId)
             self.writeValue(ad.adFormat)
-            self.writeValue(ad.adRevenue)
+            self.writeValue(Double(ad.adRevenue) ?? 0)
             self.writeValue(ad.mediator)
             self.writeValue(ad.networkName)
         } else if let error = value as? NSError {
