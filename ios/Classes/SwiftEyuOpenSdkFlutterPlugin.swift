@@ -35,7 +35,7 @@ public class SwiftEyuOpenSdkFlutterPlugin: NSObject, FlutterPlugin {
     } else if call.method == "show" {
         let dic = call.arguments as? [String: String]
         result(delegate?.handleShowAdMessage(placeId: dic?["adPlaceId"] ?? ""))
-    } else if call.method == "" {
+    } else if call.method == "logEvent" {
         let dic = call.arguments as? [String: Any]
         let pramas = dic?["params"] as? [String: Any]
         delegate?.logEvenet(name: dic?["eventName"] as? String ?? "", params: pramas)
