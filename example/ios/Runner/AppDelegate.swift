@@ -32,6 +32,10 @@ import eyu_open_sdk_flutter
         return EYAdManager.sharedInstance()?.showAd(placeId, with: window.rootViewController) ?? false
     }
     
+    func logEvenet(name: String, params: [String : Any]?) {
+        EYEventUtils.logEvent(name, parameters: params)
+    }
+    
     func adTypeFor(placeId: String) -> String {
         return EYAdManager.sharedInstance()?.getAdType(placeId) ?? ""
     }

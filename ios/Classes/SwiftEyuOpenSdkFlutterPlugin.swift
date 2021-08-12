@@ -8,6 +8,7 @@ public protocol SwiftEyuOpenSdkFlutterPluginDelegate: AnyObject {
     func adTypeFor(placeId: String) -> String
     func getBannerView(placeId: String) -> UIView?
     func getNativeView(placeId: String) -> UIView?
+    func logEvenet(name: String, params: [String: Any]?)
 }
 
 public class SwiftEyuOpenSdkFlutterPlugin: NSObject, FlutterPlugin {
@@ -34,6 +35,10 @@ public class SwiftEyuOpenSdkFlutterPlugin: NSObject, FlutterPlugin {
     } else if call.method == "show" {
         let dic = call.arguments as? [String: String]
         result(delegate?.handleShowAdMessage(placeId: dic?["adPlaceId"] ?? ""))
+    } else if call.method == "" {
+        let dic = call.arguments as? [String: Any]
+        let pramas = dic?["params"] as? [String: Any]
+        delegate?.logEvenet(name: dic?["eventName"] as? String ?? "", params: pramas)
     } else {
         result(FlutterMethodNotImplemented)
     }
