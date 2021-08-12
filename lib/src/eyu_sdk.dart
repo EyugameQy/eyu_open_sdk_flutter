@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:developer';
 
 import 'package:eyu_open_sdk_flutter/src/ad_listeners.dart';
 import 'package:eyu_open_sdk_flutter/src/ad_manager.dart';
@@ -7,7 +6,7 @@ import 'package:flutter/services.dart';
 
 class EyuSdk {
   static const MethodChannel _channel =
-  const MethodChannel('com.eyu.opensdk/ad');
+      const MethodChannel('com.eyu.opensdk/ad');
 
   static Future<String> get platformVersion async {
     final String version = await _channel.invokeMethod('getPlatformVersion');
@@ -22,11 +21,16 @@ class EyuSdk {
     await _channel.invokeMethod('show', {"adPlaceId": adPlaceId});
   }
 
-  static Future<bool?> isAdLoaded(String adPlaceId) async{
+  static Future<bool?> isAdLoaded(String adPlaceId) async {
     return _channel.invokeMethod<bool>('isAdLoaded', {"adPlaceId": adPlaceId});
   }
 
   static setListener(EyuAdListener adListener) async {
     adManager.eyuAdListener = adListener;
+  }
+
+  static logEvent(String eventName, {Map<String, dynamic>? params}) {
+    return _channel.invokeMethod<bool>(
+        'logEvent', {"eventName": eventName, "params": params});
   }
 }

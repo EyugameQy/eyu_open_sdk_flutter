@@ -3,6 +3,7 @@ package com.eyu.eyu_open_sdk_flutter
 import androidx.annotation.NonNull
 import com.eyu.opensdk.ad.EyuAdListener
 import com.eyu.opensdk.ad.EyuAdManager
+import com.eyu.opensdk.common.event.EventHelper
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.embedding.engine.plugins.FlutterPlugin.FlutterPluginBinding
@@ -33,8 +34,11 @@ class EyuOpenSdkFlutterPlugin : FlutterPlugin, ActivityAware, MethodChannel.Meth
         } else if (call.method == "isAdLoaded") {
             result.success(EyuAdManager.getInstance().isAdLoaded(call.argument<String>("adPlaceId")))
         } else if (call.method == "show") {
-            result.success(EyuAdManager.getInstance().show(activityBinding.activity,call.argument<String>("adPlaceId")))
-        }  else {
+            EyuAdManager.getInstance().show(activityBinding.activity,call.argument<String>("adPlaceId"))
+            result.success(true)
+        } else if(call.method == "logEvent"){
+            EventHelper.getInstance().logEventWithParamsMap(call.argument("eventName"),call.argument("params"))
+        } else {
             result.notImplemented()
         }
     }
