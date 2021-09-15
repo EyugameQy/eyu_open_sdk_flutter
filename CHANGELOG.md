@@ -16,3 +16,6 @@ native list
 
 ## 0.0.6
 native page list
+
+## 0.0.7
+bug fix
