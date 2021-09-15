@@ -27,7 +27,6 @@ class FlutterNativeAd(ctx: Activity, var placeId: String) : FlutterAd(),Platform
     }
 
     override fun destroy() {
-        Log.d("FlutterNativeAd","destroy")
         nativeAdAdapter?.destroy()
     }
 }

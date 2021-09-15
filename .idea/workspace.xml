@@ -9,21 +9,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c392b9e-d47c-4a47-85d1-7dfc421ab3e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/eyu/eyu_open_sdk_flutter/AdMessageCodec.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/eyu_open_sdk_flutter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/eyu_open_sdk_flutter.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/eyu/eyu_open_sdk_flutter/AdManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/eyu/eyu_open_sdk_flutter/AdManager.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/eyu/eyu_open_sdk_flutter/AdMessageCodec.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/eyu/eyu_open_sdk_flutter/EyuOpenSdkFlutterPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/eyu/eyu_open_sdk_flutter/EyuOpenSdkFlutterPlugin.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/eyu/eyu_open_sdk_flutter/EyuSdkAdViewFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/eyu/eyu_open_sdk_flutter/EyuSdkAdViewFactory.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/eyu/eyu_open_sdk_flutter/FlutterAd.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/eyu/eyu_open_sdk_flutter/FlutterAd.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/eyu/eyu_open_sdk_flutter/FlutterBannerAd.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/eyu/eyu_open_sdk_flutter/FlutterBannerAd.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/eyu/eyu_open_sdk_flutter/FlutterNativeAd.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/eyu/eyu_open_sdk_flutter/FlutterNativeAd.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/page2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/page2.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/ad_containers.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/ad_containers.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/eyu_sdk.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/eyu_sdk.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -110,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628751633707</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="原生广告和banner根据page保存和销毁">
+      <created>1631699731321</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1631699731321</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -154,7 +150,8 @@
     <MESSAGE value="增加Android广告插件，支持激励视频，插屏，原生和banner广告" />
     <MESSAGE value="合并代码" />
     <MESSAGE value="增加事件上报接口" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加事件上报接口" />
+    <MESSAGE value="原生广告和banner根据page保存和销毁" />
+    <option name="LAST_COMMIT_MESSAGE" value="原生广告和banner根据page保存和销毁" />
   </component>
   <component name="WindowStateProjectService">
     <state x="584" y="316" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1625641037593">
@@ -169,10 +166,10 @@
       <screen x="0" y="23" width="1680" height="969" />
     </state>
     <state x="646" y="261" key="AndroidProcessChooserDialog/0.23.1680.969@0.23.1680.969" timestamp="1624608938950" />
-    <state x="440" y="82" key="CommitChangelistDialog2" timestamp="1628751633456">
+    <state x="440" y="82" key="CommitChangelistDialog2" timestamp="1631699730591">
       <screen x="0" y="23" width="1680" height="962" />
     </state>
-    <state x="440" y="82" key="CommitChangelistDialog2/0.23.1680.962@0.23.1680.962" timestamp="1628751633456" />
+    <state x="440" y="82" key="CommitChangelistDialog2/0.23.1680.962@0.23.1680.962" timestamp="1631699730591" />
     <state x="440" y="82" key="CommitChangelistDialog2/0.23.1680.969@0.23.1680.969" timestamp="1625640881857" />
     <state x="100" y="122" width="1480" height="764" key="DiffContextDialog" timestamp="1631695937066">
       <screen x="0" y="23" width="1680" height="962" />
@@ -208,10 +205,10 @@
     </state>
     <state x="328" y="89" key="SettingsEditor/0.23.1680.969@0.23.1680.969" timestamp="1624847332992" />
     <state x="375" y="93" key="SettingsEditor/0.25.1920.994@0.25.1920.994" timestamp="1628755081339" />
-    <state x="440" y="232" key="Vcs.Push.Dialog.v2" timestamp="1628751799722">
+    <state x="440" y="232" key="Vcs.Push.Dialog.v2" timestamp="1631700230902">
       <screen x="0" y="23" width="1680" height="962" />
     </state>
-    <state x="440" y="232" key="Vcs.Push.Dialog.v2/0.23.1680.962@0.23.1680.962" timestamp="1628751799722" />
+    <state x="440" y="232" key="Vcs.Push.Dialog.v2/0.23.1680.962@0.23.1680.962" timestamp="1631700230902" />
     <state x="440" y="234" key="Vcs.Push.Dialog.v2/0.23.1680.969@0.23.1680.969" timestamp="1625640896637" />
     <state x="585" y="248" key="VcsDiffUtil.ChangesDialog" timestamp="1625640436658">
       <screen x="0" y="23" width="1680" height="969" />
