@@ -7,8 +7,9 @@ public protocol SwiftEyuOpenSdkFlutterPluginDelegate: AnyObject {
     func handleShowAdMessage(placeId: String) -> Bool
     func adTypeFor(placeId: String) -> String
     func getBannerView(placeId: String) -> UIView?
-    func getNativeView(placeId: String) -> UIView?
+    func getNativeView(placeId: String, page: String, identifier: String) -> UIView?
     func logEvenet(name: String, params: [String: Any]?)
+    func releaseAdOn(page: String)
 }
 
 public class SwiftEyuOpenSdkFlutterPlugin: NSObject, FlutterPlugin {
@@ -39,6 +40,10 @@ public class SwiftEyuOpenSdkFlutterPlugin: NSObject, FlutterPlugin {
         let dic = call.arguments as? [String: Any]
         let pramas = dic?["params"] as? [String: Any]
         delegate?.logEvenet(name: dic?["eventName"] as? String ?? "", params: pramas)
+    } else if call.method == "dispose" {
+        let pramas = call.arguments as? [String: String]
+        let page = pramas?["page"]
+        delegate?.releaseAdOn(page: page ?? "")
     } else {
         result(FlutterMethodNotImplemented)
     }

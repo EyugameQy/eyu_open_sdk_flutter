@@ -30,7 +30,7 @@ flutter_ios_podfile_setup
 target 'Runner' do
   use_frameworks!
   use_modular_headers!
-  pod 'EyuLibrary-ios',:subspecs => ['Core', 'abu_ad_sdk'], :git => 'https://github.com/EyugameQy/EyuLibrary-ios.git',:tag =>'2.2.9'
+  pod 'EyuLibrary-ios',:subspecs => ['Core', 'abu_ad_sdk'], :git => 'https://github.com/EyugameQy/EyuLibrary-ios.git',:tag =>'2.4.3'
   flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
 end
 

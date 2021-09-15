@@ -44,8 +44,12 @@ import eyu_open_sdk_flutter
         return EYAdManager.sharedInstance()?.getBannerView(placeId)
     }
     
-    func getNativeView(placeId: String) -> UIView? {
-        return EYAdManager.sharedInstance()?.getNativeView(placeId, controller: window.rootViewController)
+    func getNativeView(placeId: String, page: String, identifier: String) -> UIView? {
+        return EYAdManager.sharedInstance().getNativeView(placeId, customKey: identifier, controller: window.rootViewController, page: page)
+    }
+    
+    func releaseAdOn(page: String) {
+        EYAdManager.sharedInstance().removeNativeAdViewCache(page)
     }
     
     func convertEyuadToFlutter(eyuAd: EYuAd) -> FlutterEYuAd {

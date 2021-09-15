@@ -9,22 +9,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c392b9e-d47c-4a47-85d1-7dfc421ab3e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/eyu/eyu_open_sdk_flutter/AdMessageCodec.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/eyu_open_sdk_flutter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/eyu_open_sdk_flutter.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/eyu/eyu_open_sdk_flutter/AdManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/eyu/eyu_open_sdk_flutter/AdManager.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/eyu/eyu_open_sdk_flutter/AdMessageCodec.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/eyu/eyu_open_sdk_flutter/EyuOpenSdkFlutterPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/eyu/eyu_open_sdk_flutter/EyuOpenSdkFlutterPlugin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/eyu/eyu_open_sdk_flutter/EyuSdkAdViewFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/eyu/eyu_open_sdk_flutter/EyuSdkAdViewFactory.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/eyu/eyu_open_sdk_flutter/FlutterAd.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/eyu/eyu_open_sdk_flutter/FlutterAd.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/eyu/eyu_open_sdk_flutter/FlutterBannerAd.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/eyu/eyu_open_sdk_flutter/FlutterBannerAd.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/eyu/eyu_open_sdk_flutter/FlutterNativeAd.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/eyu/eyu_open_sdk_flutter/FlutterNativeAd.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/page2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/page2.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/ad_containers.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/ad_containers.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/eyu_sdk.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/eyu_sdk.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Podfile" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Podfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Runner/AppDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner/AppDelegate.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/EYSdkAdViewFactory.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/EYSdkAdViewFactory.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/SwiftEyuOpenSdkFlutterPlugin.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/SwiftEyuOpenSdkFlutterPlugin.swift" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +242,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/android/src/main/kotlin/com/eyu/eyu_open_sdk_flutter/EyuOpenSdkFlutterPlugin.kt</url>
-          <line>39</line>
+          <line>44</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
