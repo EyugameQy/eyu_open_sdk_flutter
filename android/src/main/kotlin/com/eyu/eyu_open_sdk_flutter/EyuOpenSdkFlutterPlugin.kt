@@ -31,14 +31,20 @@ class EyuOpenSdkFlutterPlugin : FlutterPlugin, ActivityAware, MethodChannel.Meth
             result.success("Android ${android.os.Build.VERSION.RELEASE}")
         } else if (call.method == "init") {
             sdkInitializer?.init(adManager.eyuAdListener)
+            result.success(null)
         } else if (call.method == "isAdLoaded") {
             result.success(EyuAdManager.getInstance().isAdLoaded(call.argument<String>("adPlaceId")))
         } else if (call.method == "show") {
             EyuAdManager.getInstance().show(activityBinding.activity,call.argument<String>("adPlaceId"))
             result.success(true)
+        } else if(call.method == "dispose"){
+            var page:String = call.argument("page")!!
+            adManager.dispose(page)
+            result.success(null)
         } else if(call.method == "logEvent"){
             EventHelper.getInstance().logEventWithParamsMap(call.argument("eventName"),call.argument("params"))
-        } else {
+            result.success(null)
+        }  else {
             result.notImplemented()
         }
     }

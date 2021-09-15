@@ -12,9 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import 'dart:developer';
-import 'dart:math';
-
 import 'package:eyu_open_sdk_flutter/eyu_open_sdk_flutter.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
@@ -51,8 +48,11 @@ class EyuAd {
 
 class BannerAdWidget extends StatefulWidget {
   final String placeId;
+  final String page;
+  final String identifier;
 
-  BannerAdWidget({required this.placeId});
+  BannerAdWidget(
+      {required this.page, required this.placeId, this.identifier = "default"});
 
   @override
   State<StatefulWidget> createState() {
@@ -82,27 +82,28 @@ class _BannerWidgetState extends State<BannerAdWidget> {
       return Container(width: 0, height: 0);
     }
     return Container(
-        width: MediaQuery
-            .of(context)
-            .size
-            .width
-            .truncate()
-            .toDouble(),
+        width: MediaQuery.of(context).size.width.truncate().toDouble(),
         height: _height,
-        child: AdWidget(placeId: widget.placeId));
+        child: AdWidget(
+            page: widget.page,
+            placeId: widget.placeId,
+            identifier: widget.identifier));
   }
 }
 
 class NativeAdWidget extends StatefulWidget {
+  final String page;
   final String placeId;
+  final String identifier;
   final double width;
   final double height;
 
-  NativeAdWidget({
-    required this.placeId,
-    required this.height,
-    this.width = -1
-  });
+  NativeAdWidget(
+      {required this.page,
+      required this.placeId,
+      required this.height,
+      this.width = -1,
+      this.identifier = "default"});
 
   @override
   State<StatefulWidget> createState() {
@@ -124,7 +125,11 @@ class _NativeWidgetState extends State<NativeAdWidget> {
   void updateHeight(bool loaded) {
     setState(() {
       _height = loaded ? widget.height : 0;
-      _width = loaded ? (widget.width < 0 ? MediaQuery.of(context).size.width.truncate().toDouble():0) : 0;
+      _width = loaded
+          ? (widget.width < 0
+              ? MediaQuery.of(context).size.width.truncate().toDouble()
+              : 0)
+          : 0;
     });
   }
 
@@ -136,18 +141,27 @@ class _NativeWidgetState extends State<NativeAdWidget> {
     return Container(
         width: _width,
         height: _height,
-        child: AdWidget(placeId: widget.placeId));
+        child: AdWidget(
+            page: widget.page,
+            placeId: widget.placeId,
+            identifier: widget.identifier));
   }
 }
 
 class AdWidget extends StatelessWidget {
-  const AdWidget({Key? key, required this.placeId}) : super(key: key);
+  const AdWidget(
+      {Key? key,
+      required this.page,
+      required this.placeId,
+      required this.identifier})
+      : super(key: key);
 
+  final String page;
   final String placeId;
+  final String identifier;
 
   @override
   Widget build(BuildContext context) {
-    print("${placeId}----${adManager.channel.name}/ad_widget");
     if (defaultTargetPlatform == TargetPlatform.android) {
       return PlatformViewLink(
         viewType: '${adManager.channel.name}/ad_widget',
@@ -164,7 +178,11 @@ class AdWidget extends StatelessWidget {
             id: params.id,
             viewType: '${adManager.channel.name}/ad_widget',
             layoutDirection: TextDirection.ltr,
-            creationParams: placeId,
+            creationParams: {
+              "page": page,
+              "placeId": placeId,
+              "identifier": identifier
+            },
             creationParamsCodec: StandardMessageCodec(),
           )
             ..addOnPlatformViewCreatedListener(params.onPlatformViewCreated)
@@ -175,7 +193,11 @@ class AdWidget extends StatelessWidget {
 
     return UiKitView(
       viewType: '${adManager.channel.name}/ad_widget',
-      creationParams: placeId,
+      creationParams: {
+        "page": page,
+        "placeId": placeId,
+        "identifier": identifier
+      },
       creationParamsCodec: StandardMessageCodec(),
     );
   }

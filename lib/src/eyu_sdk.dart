@@ -18,7 +18,7 @@ class EyuSdk {
   }
 
   static show(String adPlaceId) async {
-    await _channel.invokeMethod('show', {"adPlaceId": adPlaceId});
+    await _channel.invokeMethod<bool>('show', {"adPlaceId": adPlaceId});
   }
 
   static Future<bool?> isAdLoaded(String adPlaceId) async {
@@ -29,8 +29,12 @@ class EyuSdk {
     adManager.eyuAdListener = adListener;
   }
 
-  static logEvent(String eventName, {Map<String, dynamic>? params}) {
-    return _channel.invokeMethod<bool>(
+  static logEvent(String eventName, {Map<String, dynamic>? params}) async{
+    await _channel.invokeMethod<void>(
         'logEvent', {"eventName": eventName, "params": params});
+  }
+
+  static dispose(String page){
+    _channel.invokeMethod<void>('dispose', {"page": page});
   }
 }
